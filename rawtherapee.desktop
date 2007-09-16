@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Raw Therapee
+Comment=THe Experimental RAw Photo Editor
+Icon=rawtherapee.png
+Exec=rawtherapee
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Photography;GTK;
+# vi: encoding=utf-8

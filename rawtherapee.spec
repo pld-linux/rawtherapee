@@ -1,10 +1,12 @@
 # TODO:
 # - check the license if its distributable...
 # - gtkrc and options should be marked as config and moved to /etc ?
+# attached gtkrc is full of bugs and does not fit to system theme.
+#
 Summary:	THe Experimental RAw Photo Editor
 Name:		rawtherapee
 Version:	2.2
-Release:	1
+Release:	1.1
 License:	distributable ?
 Group:		X11/Applications/Graphics
 Source0:	http://www.rawtherapee.com/%{name}22_glibc24.tgz
@@ -12,7 +14,8 @@ Source0:	http://www.rawtherapee.com/%{name}22_glibc24.tgz
 Source1:	%{name}.desktop
 URL:		http://www.rawtherapee.com/
 # is it ok?
-Suggests:	uname(sse)
+# no it isn't
+#Suggests:	uname(sse)
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_appdir},%{_desktopdir},%{_pixmapsdir}} \
 	$RPM_BUILD_ROOT%{_appdir}/{images,profiles}
 
-install gtkrc options rt $RPM_BUILD_ROOT%{_appdir}
+install options rt $RPM_BUILD_ROOT%{_appdir}
 install images/* $RPM_BUILD_ROOT%{_appdir}/images
 install profiles/* $RPM_BUILD_ROOT%{_appdir}/profiles
 
@@ -51,7 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_appdir}
 %attr(755,root,root) %{_appdir}/rt
-%{_appdir}/gtkrc
 %{_appdir}/options
 %dir %{_appdir}/images
 %{_appdir}/images/*.png

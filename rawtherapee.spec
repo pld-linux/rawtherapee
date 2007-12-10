@@ -16,6 +16,7 @@ URL:		http://www.rawtherapee.com/
 # is it ok?
 # no it isn't
 #Suggests:	uname(sse)
+Requires:	gtk+2 >= 2.10
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

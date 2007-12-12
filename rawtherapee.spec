@@ -4,6 +4,7 @@
 # attached gtkrc is full of bugs and does not fit to system theme.
 #
 Summary:	THe Experimental RAw Photo Editor
+Summary(pl.UTF-8):	THe Experimental RAw Photo Editor - eksperymentalny edytor zdjęć RAW
 Name:		rawtherapee
 Version:	2.2
 Release:	1.1
@@ -12,18 +13,21 @@ Group:		X11/Applications/Graphics
 Source0:	http://www.rawtherapee.com/%{name}22_glibc24.tgz
 # NoSource0-md5:	eba5b474a750abf41ab406cc25989349
 Source1:	%{name}.desktop
+NoSource:	0
 URL:		http://www.rawtherapee.com/
-# is it ok?
-# no it isn't
-#Suggests:	uname(sse)
-Requires:	gtk+2 >= 2.10
+Requires:	gtk+2 >= 2:2.10
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_appdir		%{_libdir}/%{name}
 
 %description
-Raw Therapee is a free RAW converter and digital photo processing software.
+Raw Therapee is a free RAW converter and digital photo processing
+software.
+
+%description -l pl.UTF-8
+Raw Therapee to darmowy konwerter z formatu RAW oraz narzędzie do
+przetwarzania zdjęć cyfrowych.
 
 %prep
 %setup -q -n RawTherapee

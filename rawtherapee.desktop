@@ -1,8 +1,7 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Raw Therapee
 Comment=THe Experimental RAw Photo Editor
-Icon=rawtherapee.png
+Icon=rawtherapee
 Exec=rawtherapee
 Terminal=false
 Type=Application

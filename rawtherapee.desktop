@@ -1,9 +1,10 @@
 [Desktop Entry]
 Name=Raw Therapee
 Comment=THe Experimental RAw Photo Editor
+Comment[pl]=Eksperymentalny edytor zdjęć RAW
 Icon=rawtherapee
 Exec=rawtherapee
 Terminal=false
 Type=Application
-Categories=Application;Graphics;Photography;GTK;
+Categories=Graphics;Photography;GTK;
 # vi: encoding=utf-8

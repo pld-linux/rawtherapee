@@ -45,14 +45,14 @@ install images/* $RPM_BUILD_ROOT%{_appdir}/images
 install languages/* $RPM_BUILD_ROOT%{_appdir}/languages
 install profiles/* $RPM_BUILD_ROOT%{_appdir}/profiles
 
-cat > $RPM_BUILD_ROOT%{_bindir}/%{name} << EOF
+cat > $RPM_BUILD_ROOT%{_bindir}/%{name} << 'EOF'
 #!/bin/sh
-if [ ! -d \"\${HOME}/.%{name}\" ]; then
-        mkdir \${HOME}/.%{name}
-        cd \${HOME}/.%{name}
+if [ ! -d "${HOME}/.%{name}" ]; then
+        mkdir ${HOME}/.%{name}
+        cd ${HOME}/.%{name}
         ln -s %{_appdir}/* .
 fi
-cd \${HOME}/.%{name}
+cd ${HOME}/.%{name}
 exec ./rt
 EOF
 

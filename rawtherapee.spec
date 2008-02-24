@@ -1,13 +1,12 @@
 # TODO:
 # - check the license if its distributable...
-# - gtkrc and options should be marked as config and moved to /etc ?
-# attached gtkrc is full of bugs and does not fit to system theme.
+# - startup script should respect HOME_ETC
 #
 Summary:	THe Experimental RAw Photo Editor
 Summary(pl.UTF-8):	THe Experimental RAw Photo Editor - eksperymentalny edytor zdjęć RAW
 Name:		rawtherapee
 Version:	2.3
-Release:	1
+Release:	2
 License:	distributable ?
 Group:		X11/Applications/Graphics
 Source0:	http://www.rawtherapee.com/%{name}23_glibc24.tgz
@@ -48,7 +47,12 @@ install profiles/* $RPM_BUILD_ROOT%{_appdir}/profiles
 
 cat > $RPM_BUILD_ROOT%{_bindir}/%{name} << EOF
 #!/bin/sh
-cd %{_appdir}
+if [ ! -d \"\${HOME}/.%{name}\" ]; then
+        mkdir \${HOME}/.%{name}
+        cd \${HOME}/.%{name}
+        ln -s %{_appdir}/* .
+fi
+cd \${HOME}/.%{name}
 exec ./rt
 EOF
 
@@ -63,7 +67,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_appdir}
 %attr(755,root,root) %{_appdir}/rt
-%{_appdir}/options
+# Makes rt crash sometimes.
+#%{_appdir}/options
 %dir %{_appdir}/images
 %{_appdir}/images/*.png
 %dir %{_appdir}/languages

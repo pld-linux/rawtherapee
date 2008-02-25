@@ -15,10 +15,11 @@ Source1:	%{name}.desktop
 NoSource:	0
 URL:		http://www.rawtherapee.com/
 Requires:	gtk+2 >= 2:2.10
-# this version _requires_ SSE, but it doesn't work...
-#Requires:	uname(sse)
+# this version _requires_ SSE
+Requires:	cpuinfo(sse)
 Suggests:	adobe-ICC-profiles
-ExclusiveArch:	%{ix86}
+# because of SSE
+ExclusiveArch:	i686 pentium3 pentium4 athlon
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_appdir		%{_libdir}/%{name}

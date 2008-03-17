@@ -7,4 +7,5 @@ Exec=rawtherapee
 Terminal=false
 Type=Application
 Categories=Graphics;Photography;GTK;
+MimeType=image/x-dcraw;
 # vi: encoding=utf-8

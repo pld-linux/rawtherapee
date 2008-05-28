@@ -52,7 +52,7 @@ install themes/* $RPM_BUILD_ROOT%{_appdir}/themes
 
 cat > $RPM_BUILD_ROOT%{_bindir}/%{name} << 'EOF'
 #!/bin/sh
-cd ${_appdir}
+cd %{_appdir}
 exec ./rt
 EOF
 

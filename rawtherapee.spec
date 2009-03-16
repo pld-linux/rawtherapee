@@ -7,14 +7,14 @@ Summary:	THe Experimental RAw Photo Editor
 Summary(pl.UTF-8):	THe Experimental RAw Photo Editor - eksperymentalny edytor zdjęć RAW
 Name:		rawtherapee
 Version:	2.4
-%define	_milestone	rc
+%define	_milestone	rc2
 %define	_rel		1
 Release:	1.%{_milestone}.%{_rel}
 License:	distributable ?
 Group:		X11/Applications/Graphics
 #Source0:	http://www.rawtherapee.com/%{name}23_glibc24.tgz
 Source0:	http://www.rawtherapee.com/%{name}24%{_milestone}.tgz
-# NoSource0-md5:	
+# NoSource0-md5:	cc95e7fdc44441b4c7a27e4c0fb6aad7
 Source1:	%{name}.desktop
 NoSource:	0
 URL:		http://www.rawtherapee.com/

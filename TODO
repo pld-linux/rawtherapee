@@ -3,3 +3,10 @@
 - startup script should respect HOME_ETC
 - there is 64bit version - use it.
 - it crashes - find out why (and report it - it's binary-only soft...)
+Program received signal SIGSEGV, Segmentation fault.
+0x36342eff in ?? ()
+(gdb) bt
+#0  0x36342eff in ?? ()
+#1  0xb6b6de16 in png_push_read_IDAT () from /usr/lib/libpng12.so.0
+#2  0x084f9bb0 in ?? ()
+#3  0x00000000 in ?? ()

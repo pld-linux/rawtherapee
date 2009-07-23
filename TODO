@@ -1,0 +1,5 @@
+# TODO:
+- check the license if its distributable...
+- startup script should respect HOME_ETC
+- there is 64bit version - use it.
+- it crashes - find out why (and report it - it's binary-only soft...)

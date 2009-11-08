@@ -13,6 +13,7 @@ Group:		X11/Applications/Graphics
 Source0:	http://www.rawtherapee.com/%{name}241.tgz
 # NoSource0-md5:	1c5ae716358262ebad6fa3479df0aade
 Source1:	%{name}.desktop
+Source2:	TODO
 NoSource:	0
 URL:		http://www.rawtherapee.com/
 Requires:	gtk+2 >= 2:2.10
@@ -35,6 +36,7 @@ przetwarzania zdjęć cyfrowych.
 
 %prep
 %setup -q -n RawTherapee241
+cp %{SOURCE2} PLD-TODO
 chmod -R u+w *
 
 %install
@@ -62,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc PLD-TODO
 %attr(755,root,root) %{_bindir}/*
 %dir %{_appdir}
 %attr(755,root,root) %{_appdir}/rt

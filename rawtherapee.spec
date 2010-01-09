@@ -2,16 +2,16 @@
 Summary:	THe Experimental RAw Photo Editor
 Summary(pl.UTF-8):	THe Experimental RAw Photo Editor - eksperymentalny edytor zdjęć RAW
 Name:		rawtherapee
-Version:	2.4.1
-#define	_milestone	rc2
-#define	_rel		1
-#Release:	1.%{_milestone}.%{_rel}
-Release:	0.1
+Version:	3.0
+%define	_milestone	a1
+%define	_rel		1
+Release:	0.%{_milestone}.%{_rel}
+#Release:	0.1
 License:	distributable ?
 Group:		X11/Applications/Graphics
-#Source0:	http://www.rawtherapee.com/%{name}24%{_milestone}.tgz
-Source0:	http://www.rawtherapee.com/%{name}241.tgz
-# NoSource0-md5:	1c5ae716358262ebad6fa3479df0aade
+Source0:	http://www.rawtherapee.com/%{name}30%{_milestone}.tgz
+# Source0-md5:	673056cb7269ac98a762581efe1c8c3b
+#Source0:	http://www.rawtherapee.com/%{name}241.tgz
 Source1:	%{name}.desktop
 Source2:	TODO
 NoSource:	0
@@ -35,7 +35,7 @@ Raw Therapee to darmowy konwerter z formatu RAW oraz narzędzie do
 przetwarzania zdjęć cyfrowych.
 
 %prep
-%setup -q -n RawTherapee241
+%setup -q -n RawTherapee30a1
 cp %{SOURCE2} PLD-TODO
 chmod -R u+w *
 

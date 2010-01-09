@@ -7,11 +7,11 @@ Version:	3.0
 %define	_rel		1
 Release:	0.%{_milestone}.%{_rel}
 #Release:	0.1
-License:	distributable ?
+License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://www.rawtherapee.com/%{name}30%{_milestone}.tgz
-# Source0-md5:	673056cb7269ac98a762581efe1c8c3b
-#Source0:	http://www.rawtherapee.com/%{name}241.tgz
+# NoSource0-md5:	673056cb7269ac98a762581efe1c8c3b
+#Source0:	http://www.rawtherapee.com/%{name}300.tgz
 Source1:	%{name}.desktop
 Source2:	TODO
 NoSource:	0

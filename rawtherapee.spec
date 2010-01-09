@@ -14,7 +14,6 @@ Source0:	http://www.rawtherapee.com/%{name}30%{_milestone}.tgz
 #Source0:	http://www.rawtherapee.com/%{name}300.tgz
 Source1:	%{name}.desktop
 Source2:	TODO
-NoSource:	0
 URL:		http://www.rawtherapee.com/
 Requires:	gtk+2 >= 2:2.10
 # this version _requires_ SSE
